@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<script src="/packs/js/application-4db89cd5110b48ed730f.js"></script>
+<link rel="stylesheet" media="screen" href="/packs/css/application-42b9e574.css" />
+<link rel="stylesheet" media="all" href="/assets/application-2e67bc440ed7f982ffa20d351d3a3f1271431cd6e7ff07f04717c842822c9cff.css" />
+<script src="/assets/application-f6f4b91a215ce213663712c4127bf42c36b36f16f90ef00d0e5ff8cfbffbbac7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="9qD3Rs+Za11QukD2CkWB+BNyBCQJLzsPVYYPRhaYXzQ2uhIcrx2cDfLFZ8sqNXplrBSDc+Y5mDASQ/HIq90Sjw==" />
+
+</head>
+
+<script type='text/x-mathjax-config'>
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<body>
+<!--
+<header id='header'>
+<div role="navigation" id="osu_navbar" aria-labelledby="osu_navbar_heading">
+  <h2 id="osu_navbar_heading" class="osu-semantic">Ohio State nav bar</h2>
+  <a href="#page-content" id="skip" class="osu-semantic">Skip to main content</a>
+
+  <div class="container">
+      <div class="univ_info">
+        <p class="univ_name"><a href="http://osu.edu" title="The Ohio State University">The Ohio State University</a></p>
+      </div>
+      /univ_info -->
+      <!--
+      <div class="univ_links">
+        <div class="links">
+          <ul>
+            <li><a href="http://www.osu.edu/help.php" class="help">Help</a></li>
+            <li><a href="http://buckeyelink.osu.edu/" class="buckeyelink" >BuckeyeLink</a></li>
+            <li><a href="http://www.osu.edu/map/" class="map">Map</a></li>
+            <li><a href="http://www.osu.edu/findpeople.php" class="findpeople">Find People</a></li>
+            <li><a href="https://email.osu.edu/" class="webmail">Webmail</a></li>
+            <li><a href="http://www.osu.edu/search/" class="search">Search Ohio State</a></li>
+          </ul>-->
+        </div><!-- /links -->
+      </div><!-- /univ_links -->
+    </div><!-- /container -->
+</div><!-- /osu_navbar -->
+<!--
+<nav class='navbar navbar-light bg-light navbar-expand-lg mb-4'>
+<a class="navbar-brand" href="https://stemcoding.osu.edu/"><img src="/packs/media/images/STEMcoding_v7_transparent-9bf2a9b42a94c0527bd7534fd8afc0cb.png" />
+</a>-->
+
+
+</li>
+</ul>
+</div>
+</nav>
+<!---->
+<div class='container-fluid'>
+
+</div>
+</header>
+
+<div class='container-fluid' id='content'>
+<h1>Mechanics Lab 1. Planetoids</h1>
+<!--
+<h2>Mercyhurst Course July 2020</h2>
+<div class='card'>
+<div class='card-header'>
+<h5 style='display: inline-block;'>Instructions</h5>
+<a class="btn btn-dark btn-sm float-right" href="/student/course_programming_labs/2113/submissions">View Submissions</a>
+</div>
+<div class='card-body'><template id="copy-button"><button class="clipboard btn btn-secondary btn-sm position-absolute" type="button" role="button" style="top: 0; right: 0;" data-toggle="popover" data-trigger="focus" data-title="Copied to clipboard!" data-content="Copied to clipboard!" tabindex="0"><i class="fas fa-clipboard "></i> Copy</button></template><h2><a href="https://osu.az1.qualtrics.com/jfe/form/SV_4UXG6wtb3eH4J4F" target="_blank" rel="noopener">If this is your first STEMcoding activity, please take this pre-survey on your background</a></h2>
+<h3><a href="https://osu.az1.qualtrics.com/jfe/form/SV_1O0zXHAMmPRERbD" target="_blank" rel="noopener">Please take this pre-survey before starting this exercise!</a></h3> 
+-->
+<p>This lab will guide you through coding up a web-based implementation of the classic video game asteroids. You will need to use your laptop. Unfortunately, tablets will probably not work very well unless you have an external keyboard.</p>
+<p>This example will use a programming language that is very similar to C and C++ programming. (Note: If you are familiar with C or C++ the main difference you will see is that there is no main() function and instead the draw() function serves this role.)</p>
+<p>In the classic game of Asteroids, there is a little ship that flies around in space, very far away from stars and planets so that the gravitational acceleration is zero.</p>
+<h3>Step 1. Play around with a 1-dimensional version of Asteroids</h3>
+<h4><a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/271">Click here to open a 1D version of the asteroids game</a></h4>
+<p>Push up arrow to see the rocket accelerate. Unfortunately right now the ship can only accelerate in one direction. We will change this step-by-step to make the behavior more similar to the classic asteroids game. If the example doesn't work tell the instructor.</p>
+<p><strong>Click <span style="background-color: #ffcc00;">Edit</span> and Run and you will see something like this:<br /></strong></p>
+<p>&nbsp;</p>
+<center>
+<p><img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/milestones/planetoids/planetoids_initial.png" width="700" height="700" /></p>
+</center>
+<p>Push up arrow to see the rocket accelerate. Unfortunately right now the ship can only accelerate in one direction. We will change this step-by-step to make the behavior more similar to the classic asteroids game. If the example doesn't work tell the instructor.</p>
+<p>After you press all four arrow keys you will notice there are a couple of objectives that have not yet been completed:</p>
+<center>
+<p><img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/milestones/planetoids/planetoids_wrong.png" width="840" height="254" /></p>
+</center>
+<p>If the program can detect that something is wrong with your code it will show a red <img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/red_x.png" width="15" height="15" /> next to that objective.</p>
+<p>If the program can detect that you have completed the objective it will show a green check mark <img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/check_mark.png" width="15" height="15" /> next to that objective.</p>
+<p>But the program is not very smart and if it can't tell whether you have completed the objective it will indicate a question mark like this <img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/question_mark.png" width="15" height="15" /> next to that objective.</p>
+<p>By the end of this activity your goal is to have green check marks next to all the objectives like this:</p>
+<div align="center">
+<p><img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/milestones/planetoids/planetoids_finished.png" width="680" height="254" /></p>
+</div>
+<p>The steps below will help you to achieve all these objectives!</p>
+<h3>Step 2. Look at the code!</h3>
+<p>This is the code used to move the ship around in the 1D version. Take a close look at the code and try to get an idea of what each part does:</p>
+<pre>function draw() {
+
+    // Update velocities
+    vx += deltaVx;
+
+    // Update location
+    x += vx*dt;<br /><br />    // velocity is unchanged if there are no forces
+    deltaVx = 0;<br />
+    if (keyIsDown(LEFT_ARROW)) {
+        theta += 0.0;
+    }
+    if (keyIsDown(RIGHT_ARROW)) {
+        theta += 0.0;
+    }
+    if (keyIsDown(UP_ARROW)) {
+        // Rockets on!
+        accelx = Fthrust*cos(theta)/mass;
+        deltaVx = accelx*dt;
+    } 
+    if (keyIsDown(DOWN_ARROW)) {
+        // Do nothing
+    } 
+    if (keyIsDown(32)){ //spacebar
+       // Do nothing!
+    }
+  
+    // Draw ship and other stuff
+    display();
+
+} // end draw()   DO NOT ADD ANY CODE AFTER THIS LINE!!!
+ </pre>
+<h3>Step 3. Edit the source code to let the ship rotate!</h3>
+<p>Change these lines of code:</p>
+<pre>    if (keyIsDown(LEFT_ARROW)) {
+        theta += 0.0;
+    } <br />    if (keyIsDown(RIGHT_ARROW)) {
+        theta += -0.0;<br />    }<br />
+</pre>
+<p>to look like this:</p>
+<pre>    if (keyIsDown(LEFT_ARROW)) {
+        theta += 0.1;
+    } <br />    if (keyIsDown(RIGHT_ARROW)) {
+        theta += -0.1;<br />    }
+</pre>
+<p>The asteroids game is now set up so so that only the x-component of the thrust is what accelerates the ship. Notice that allowing the ship to rotate means that we can speed up and slow down the ship because we can rotate the rocket and apply a force that is opposite to the velocity vector. Our asteroids game is already a lot more fun!</p>
+<p><a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/272">The game should now behave like it does at this link</a></p>
+<h3>Step 4. Enable multi-dimensional space travel (i.e. let the ship move in the y direction too)</h3>
+<p>Now take the code you've written and modify it so that the ship can move in the y direction. It will take a few different changes to get it to work.</p>
+<h4><strong>Step 4a. Change the "Update location" section</strong></h4>
+<p>Look at the "Update location" section. Right now it looks like this:</p>
+<pre>// Update location
+x += vx*dt;
+</pre>
+<p>As you can see, only the $x$ <code></code>position is updated. The<code> </code>$y$ position is not updated. Change the "Update location" section to this:</p>
+<pre>// Update location
+x += vx*dt;
+y += vy*dt;
+</pre>
+<h4><strong>Step 4.b. Change the "Update velocities" section</strong></h4>
+<p>If you did step 4a correctly, we can now update both the x position and the y position, but only if $v_x$ and $v_y$ are non-zero! This will only happen if we change the "Update velocities" section so that both <code>vx</code> and <code>vy</code> are updated.</p>
+<p>Change this:</p>
+<pre>// Update velocities
+vx += deltaVx;
+</pre>
+<p>to this:</p>
+<pre>// Update velocities
+vx += deltaVx;
+vy += deltaVy;
+</pre>
+<h4><strong>Step 4.c. Objects in motion move in a straight line unless acted on by a force</strong></h4>
+<p>Newton realized that objects move in a straight line with constant velocity if there are no forces acting on the object. For our computer program, we need to make sure that the velocity only changes when we push buttons on the keyboard. If we don't push any buttons then the change in velocity ($\Delta v_x$ and $\Delta v_y$) had better be zero.</p>
+<p>This is the logic behind this part of the code:</p>
+<pre>    // velocity is unchanged if there are no forces
+    deltaVx = 0;
+</pre>
+<p>Change this to make sure <code>deltaVy</code> is set to zero too:</p>
+<pre>    // velocity is unchanged if there are no forces
+    deltaVx = 0;
+    deltaVy = 0;
+</pre>
+<p>This is an important step because if you do the next step correctly, but you forget to do this the ship will accelerate uncontrollably.</p>
+<h4><strong>Step 4.d. Make sure that acceleration works in the y-direction</strong></h4>
+<p>If you've done all the steps up to this point correctly, the ship <strong><em>still</em></strong> won't move in the y direction because we haven't told the ship how to accelerate in the y direction when the thrusters are turned on. Nowhere in the program do we set <code>deltaVy</code> equal to anything except zero!</p>
+<p>Look closely at this part of the code:</p>
+<pre>    if (keyIsDown(UP_ARROW)) {
+        // Rockets on!
+        accelx = Fthrust*cos(theta)/mass;
+        deltaVx = accelx*dt;
+    }
+</pre>
+<p>You'll need to change this to something like this:</p>
+<pre>    if (keyIsDown(UP_ARROW)) {
+        // Rockets on!
+        accelx = Fthrust*cos(theta)/mass;
+        deltaVx = accelx*dt;
+        accely = <mark>????</mark>
+        deltaVy = accely*dt;
+    }
+</pre>
+<p>It's your job to replace the <mark>????</mark> with something that actually gives the correct acceleration in the y direction. (Hint: it is very similar to the code for <code>accelx</code> but the trig function might be different! Should you use cosine, sine or tangent for the trig function? If you're not sure just try one and see what happens!)</p>
+<h3>Step 5. Check that everything works as expected!</h3>
+<p><a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/273">If you make all these changes then your code should behave like this!</a></p>
+<p>Your ship should move in two dimensions!</p>
+<p><strong>Potential pitfall:</strong> Which trig function did you use to determine the y-component acceleration?</p>
+<h3>Step 6. Add code to show the path of the ship</h3>
+<p>After <code>display();</code> you can add this code and it will show the path of the ship:</p>
+<pre class="language-javascript"><code>    for( i = 0; i &lt; xhistory.length ; i+= 1) {
+     drawPoint(xhistory[i],yhistory[i]); 
+    }</code></pre>
+<p><em>Does the path look jagged or more curvy? (If you completed the "move the blob" or "accelerate the blob" exercises you can compare/contrast to those trajectories.) <strong><span style="background-color: #ffff00;">Comment on this in the questions.js file when you submit your code!</span></strong></em></p>
+<h3>Step 7. Give the ship an initial velocity</h3>
+<p>Change the ship so that it comes in from the left with an initial velocity. Modify the beginning of the code to this:</p>
+<pre>x = 0;
+y = 250;
+
+vx = 25;
+vy = 0;
+</pre>
+<p>and just for fun change the angle of the ship so that it points straight up:</p>
+<pre>theta = 3.141/2;
+</pre>
+<p>As you can see, the angle is being changed from 0 to $ \pi/2 $ radians. If converted to degrees this would be 90 degrees.</p>
+<h3>Step 8. Fire the thrusters and look closely at the trajectory of the ship</h3>
+<p>Let the ship drift a little bit and then fire the thrusters. How does the trajectory (the curve) look?</p>
+<p><strong><mark>Play around with the ship for 2-3 minutes! Change the initial velocity, position and angle of the ship. See what happens! </mark></strong></p>
+<h3>Step 9. Add planetoids to your code!</h3>
+<p>Near the beginning of your code add this line:</p>
+<pre class="language-javascript"><code>draw_planetoids = true;</code></pre>
+<p>This should make lots of planetoids show up on screen that you should try to avoid so you don't crash!</p>
+<p><a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/274">If you add this to your code the program should behave like this</a></p>
+<p><strong>Note:</strong> later you can turn the planetoids off with this code:</p>
+<pre class="language-javascript"><code>draw_planetoids = false;</code></pre>
+<p>If you want to you can set the initial velocity back to zero (<code>vx = 0;&nbsp; vy = 0;</code>) and initial position back to( <code>x = 375; y = 250;</code>)</p>
+<h3>Step 10. Find the best value of the mass of the ship to survive!</h3>
+<p>Change the value for the <code>mass</code> until you find the best choice to survive the longest in the asteroid field.&nbsp; <span style="background-color: #ffff00;"><strong>Which value for <code>mass</code> do you think is the best?</strong></span></p>
+<p><strong>Optional:</strong> If you want to keep track of how much time has elapsed before you die you can add this code to the beginning:</p>
+<pre class="language-javascript"><code>t = 0;</code></pre>
+<p>and then put this code <strong>after</strong> the <code>display();</code> function but before the end of the draw function:</p>
+<pre class="language-javascript"><code>     t += dt;
+     drawText("time = ",0.75*width,0.75*height);
+     drawText(t,0.85*width,0.75*height);</code></pre>
+<h2><span style="background-color: #f1c40f;">At this point you should have all green check marks! Yay!</span></h2>
+<h2>Challenges: Choose one!</h2>
+<h3>Option: Add Reverse thrusters</h3>
+<p>This is one of the easier challenges. Notice that your code has a section for when you press the down arrow:</p>
+<pre>    if (keyIsDown(DOWN_ARROW)) {
+        // Do nothing                                                           
+    }
+</pre>
+<p>Where it says "Do nothing" how would you add code to fire the thrusters in reverse?</p>
+<p>Hint: You want to accelerate in the opposite direction of the acceleration you get when the thrusters are turned on.</p>
+<p>&nbsp;<a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/275">If you implement this correctly your code should behave like this</a></p>
+<h3>Option: Add a projectile to the game</h3>
+<p>You can add another if statement to check to see if you've pressed the spacebar:</p>
+<pre>    if (keyIsPressed &amp;&amp; key == ' ') { // spacebar is pressed
+      // Do nothing
+    } 
+</pre>
+<p>How would you modify the code so that the spacebar shoots a projectile from the nose of the ship? Add two new float variables called xprojectile and yprojectile to the beginning of the program and use the "drawPoint" function to show the position of the projectile:</p>
+<pre class="language-javascript"><code>     drawPoint(xprojectile,yprojectile);</code></pre>
+<p>Advice: Place this function just after display(); so that it is drawn every time but set xprojectile and y projectile to zero initially so that the point is drawn at the top left corner of the grid and you can't see it. When the spacebar is pressed set the xprojectile and yprojectile equal to the position of the ship. That at least will put a dot on the screen where the ship is. How would you make it move?</p>
+<h2>
+<p><strong> How to get full credit on this assignment: </strong></p>
+<p>&nbsp;<strong>1. Complete steps 1-4 and make absolutely sure that the ship can turn and move in two dimensions</strong></p>
+<p>To be sure you did steps 1-4 correclty, make sure your program behaves exactly as it does at the link below:</p>
+<p><a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/273">If you make all these changes then your code should behave like this!</a></p>
+<p><strong>2. Complete one of the challenges</strong></p>
+<p>Most people choose the reverse thrusters, which is probably the easiest</p>
+<p><strong>3. Comment on the trajectory/path of the ship</strong></p>
+<p>Add the code from step 6 to show the trajectory of the ship. In the questions.js file say something about how jagged or curvy the trajectory is (e.g. compared to "move the blob" and "accelerate the blob" if you completed those earlier).</p>
+<p><strong>4. Give the ship an initial velocity</strong></p>
+<p>Follow the directions in Step 7 to give the ship an initial velocity and fire the thrusters to see what happens to the trajectory (as discussed in Step 8). Does the trajectory look curvy or jagged?</p>
+<p><strong>5. Add planetoids (Step 9) and a timer and find the best value of the mass of the ship to survive! (Step 10)<br /></strong></p>
+<p>&nbsp;After you add planetoids <a target="_blank" rel="noopener" href="https://stemcoding.osu.edu/student/lab_file_groups/274">If you add this to your code the program should behave like this</a>&nbsp; In questions.js comment on what you think is the best mass to survive the longest.</p>
+<p><strong>6. Make sure you get all green check marks</strong></p>
+<p>Make sure you get all green check marks <img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/check_mark.png" width="15" height="15" /> Talk to your teacher or leave a note in questions.js if there is a red <img src="https://www.asc.ohio-state.edu/orban.14/stemcoding/red_x.png" width="15" height="15" /> that you can't figure out.</p>
+<p><strong>7. Submit your code before the deadline</strong></p>
+<p>Click submit from the project menu!</p></div>
+</div>
+
+</div>
+</body>
+</html>
